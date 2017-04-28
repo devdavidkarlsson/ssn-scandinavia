@@ -1,0 +1,15 @@
+{
+  "name": "ssn-validator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "co-mocha": "^1.2.0",
+    "mocha": "^3.3.0",
+    "moment": "^2.18.1"
+  },
+  "scripts": {
+    "test": "mocha $(find test -name '*.js') --watch"
+  }
+}
