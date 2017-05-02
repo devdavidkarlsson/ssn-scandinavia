@@ -54,6 +54,7 @@ const algs = {
     return moment(input.substring(0,6), "DDMMYY").isValid();
   },
   sessn(ssn) {
+  	
     if (/[^0-9-\s]+/.test(ssn)) {
       return false;
     }
@@ -79,6 +80,10 @@ const algs = {
   }
 };
 const validateSSN = (ssn, country) =>{
+  if(ssn !== void 0 && typeof ssn !== 'string'){
+  	ssn = ssn.toString()
+  }
+
   switch(country){
     case 'SE':
       return (algs.sessn(ssn) === true);
